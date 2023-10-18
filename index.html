@@ -18,17 +18,10 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <h1>🤫 Hush Line</h1>
-             <nav>
-                <li><a href="/info" target="_blank">Info</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Special:Random" class="btn" rel="noopener noreferrer">Close App</a></li>
-            </nav>
-        </div>
-    </header>
     <form id="message-form" action="/save_message" method="POST">
-        <label for="email-input">Email Address:</label>
+        <h1>B14CKB0X</h1>
+        <p>The self-hosted, anonymous tip line that you own. Sign up to learn more</p>
+        <label for="email-input">Email Address</label>
         <input type="email" id="email-input" name="email" required>
         <p>🔒 Your message will be encrypted and only readable by the owner of the following information:</p>
         <div id="pgp-owner-info" class="card mt-3">
@@ -41,7 +34,7 @@
         </div>
     </div>
         <div class="button-container">
-          <button type="submit" id="submit-button">Submit</button>
+          <button type="submit" id="submit-button">Sign Up</button>
           <span class="spinner hidden"></span>
         </div>
     </form>

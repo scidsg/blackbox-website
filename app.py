@@ -56,7 +56,7 @@ def send_email_notification(message):
     msg = MIMEMultipart()
     msg["From"] = sender_email
     msg["To"] = sender_email
-    msg["Subject"] = "🤫 New Hush Line Message Received"
+    msg["Subject"] = "Someone is interested in Blackbox!"
 
     body = f"{message}"
     msg.attach(MIMEText(body, "plain"))

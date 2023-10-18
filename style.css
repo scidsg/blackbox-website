@@ -55,13 +55,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	font-family: 'Atkinson Hyperlegible', sans-serif;
 	margin: 0;
 	min-height: 100vh;
 	height: auto;
-	padding: 6.5rem 2rem 1rem 2rem;
-	background-color: #F6EFFF;
+	padding: 1rem 4rem;
+	background-color: #333;
 }
 
 body.info {
@@ -107,13 +107,20 @@ body.info h2 {
 }
 
 h1, p, a, label, input, ul, pre {
-	color: #1d1d1c !important;
+	color: #f6f6f6 !important;
 }
 
 h1 {
-	font-size: 1.25rem;
+	font-size: 3.5rem;
 	letter-spacing: .0125rem;
-	font-family: 'Playfair', serif;
+	font-family: Courier, monospace;
+	font-weight: 100;
+	margin-bottom: .5rem;
+}
+
+h1 + p {
+	font-size: 1.25rem;
+	margin-bottom: 2rem;
 }
 
 header {
@@ -199,11 +206,14 @@ input {
 	padding: .75rem;
   margin-bottom: 1rem;
   border-radius: .25rem;
-  outline: 1px solid rgba(0,0,0,0.1);
+  outline: 1px solid rgba(255,255,255,0.5);
   box-shadow: 0px 4px 12px -4px rgba(0,0,0,0.15);
   border: none;
   width: 100%;
+  max-width: 480px;
   font-size: 1rem;
+  background-color: transparent;
+
 }
 
 .setup-form label {
@@ -213,8 +223,9 @@ input {
 
 .setup-form input:focus,
 textarea:focus,
+input:focus,
 a:focus {
-	 outline: 2px solid #7D25C1;
+	 outline: 3px solid rgba(255,255,255,1);
 }
 
 .emoji {
@@ -224,10 +235,10 @@ a:focus {
 }
 
 p {
-	margin-bottom: 1.5rem;
+	margin: .5rem 0;
 	max-width: 640px;
 	width: 100%;
-	text-align: center;
+	text-align: left;
 	font-size: .825rem;
 	color: #4F4F4F;
 }
@@ -241,7 +252,7 @@ label {
 #message-form {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	align-items: start;
 	margin-bottom: 2rem;
 	max-width: 640px;
 	width: 100%;
@@ -267,6 +278,8 @@ textarea + p > a {
 
 .button-container {
   position: relative;
+ 	margin-top: 1.5rem;
+
 }
 
 button {
@@ -276,8 +289,8 @@ button {
 	border-radius: 50vw;
 	border: none;
 	font-weight: 700;
-	background-color: #7D25C1;
-	color: #fff;
+	background-color: #f6f6f6;
+	color: #333;
 	width: 50%;
 	min-width: 240px;
 	cursor: pointer;
@@ -320,15 +333,15 @@ button {
   display: none;
   width: 1.5rem;
   height: 1.5rem;
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  border-left-color: #ffffff;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #7D25C1;
+  background-color: #f6f6f6;
   z-index: 1;
 }
 
@@ -352,23 +365,17 @@ footer p {
 #pgp-owner-info {
   overflow: hidden;
   transition: max-height 0.4s ease-out;
-	background-color: rgba(255,255,255,.65);
-	padding: .75rem 1rem;
-	box-shadow: 0px 10px 25px -10px rgba(0,0,0,0.15);
-	outline: 1px solid rgba(0,0,0,0.05);
-	border-radius: .25rem;
 	font-family: 'Mono', monospace;
-	width: 100%;
-	max-width: 640px;
 	display: flex !important;
 	flex-direction: column;
+	align-self: start;
 	gap: .75rem;
 	margin-bottom: .625rem;
 	height: fit-content !important;
 }
 
 #pgp-owner-info  p {
-	font-size: .75rem !important;
+	font-size: .625rem !important;
 	text-align: left;
 }
 
